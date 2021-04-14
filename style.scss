@@ -1,0 +1,1024 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//color varables
+$body-color: rgb(237, 240, 253);
+$heading-color: #1c1a40;
+$text-color:#a9a7c7;
+$blue:#6d85fd;
+$thick-text-color:#252169;
+// utitly styling
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+// font awsome stlying
+.fa-bed,.fa-shower,.fa-uncharted{
+    color: $blue;
+}
+//mixins for styles
+.btn-phone-nav{
+    border: 1px solid white;
+    display: inline-block;
+    padding: .7rem 1.2rem;
+    border-radius: 10px;
+    background-color:transparent;
+
+ 
+}
+
+
+
+// phone styling
+
+body{
+    background-color: $body-color;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.hero-section{
+    position: relative;
+    // background-color: black;
+    padding: 1rem 0;
+    height: 69vh;
+
+    text-align: center;
+    // border: 1px solid red;
+
+
+
+
+// styling for form on hero section
+// at 348px the for fits well
+.radios{
+    display: none;
+}
+
+//give margin left and right to the form for some space
+#search-home{
+    margin: 0 1%;
+}
+.search-box{
+    display: flex; 
+    align-items: center;
+    background-color:white ;
+    border: 2px solid white;
+    border-radius: 5px;
+    max-width: 600px;
+    // display: flex;
+    // 020090561 -- jaji acct
+    
+
+
+    #selectSearch{
+        color: $heading-color;
+        font-weight: 800;
+        padding: 1rem .5rem;
+
+        width: 20%;
+        border: none;
+        outline: none;
+
+
+    }
+    #inputsearch{
+        width: 50%;
+        border: transparent;
+        padding: 1rem .5rem;
+        
+        outline: none;
+    }
+
+    input[type=submit]{
+        width: 30%;
+        background-color: $blue;
+        border: none;
+        padding: 1rem 0rem;
+        color: white;
+        
+    }
+}
+
+
+
+
+
+
+
+
+    .hero-section_content{
+        // border:1px solid green;
+        // margin-top: 25%;
+        // padding: .5rem 0;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        // background-color: red;
+        height: 90%;
+        h1{
+            // color: white;
+            color: lighten($color: $heading-color, $amount: 10);
+            padding: .5rem;
+            font-size: 2rem;
+            
+        }
+        p{
+          color: #555086;
+          font-weight: 500;
+          font-size: 1rem;
+          padding: .9rem 0.6rem;
+          margin: 2rem 0;
+        //   font-weight: 800;
+          
+            
+        }
+    }
+    
+    .hero-image-section{
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: -1;
+        background:
+        linear-gradient(            
+            rgba(237, 240, 253,.7),
+        rgba(237, 240, 253,.7),
+            rgba(237, 240, 253,.7)
+
+ 
+        ) ,url('image/IMG-20200805-WA0023.jpg')no-repeat center/cover;
+        // url('image/IMG-20200805-WA0032.jpg')no-repeat center/ cover;
+
+
+    }
+
+}
+
+// style for the rin estate logo start
+.logo{
+
+    color: $heading-color;
+    span{
+        color: $blue;
+    }
+}       
+// style for the rin estate logo end
+
+nav{
+    // border: 1px solid red;
+    display: flex;
+    width: 100%;
+
+    margin: 0 auto;
+    justify-content: space-between;
+   align-items: center;
+
+    // justify-content: space-around;
+    padding: .6rem 2rem;
+
+  
+    // hamburger styling
+    .ham{
+        background-color: whitesmoke;
+        padding: .5rem;
+        position: absolute;
+        right: 6%;
+        cursor: pointer;
+        height: 40px;
+        width: 40px;
+        z-index: 5;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px 1px  rgb(189, 188, 188);
+      
+      :nth-child(2){
+          background-color: darken($color: $blue, $amount: 10);
+      }
+        span{
+            display: block;
+            width: 100%;
+            height: 2.3px;
+            background-color: black;
+            margin: .3rem 0;
+            padding: .4px 0;
+        }
+    }
+
+
+
+    .navlinks{
+        // display: none;
+        clip-path: circle(0px at 324px 45px);
+        // clip-path: circle(1000px);
+        transition: all 1s ease-in-out;
+        background-color: rgba(28, 26, 64,.9);
+        width: 100%;
+        height: 90vh;
+        position: absolute;
+        left: 0;
+        top: 0;        
+        list-style-type: none;
+
+        ul{
+
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+                // background-color: red;
+            margin: 50% 0;
+                // padding: 17% 0;
+            padding-right:11%;
+                height: 40%;        
+
+                li{
+                    list-style-type: none;
+
+
+                    .phone-signin{
+                        background-color: white;
+                        color: $heading-color;
+                        font-weight: 600;
+                    }
+                }
+        
+            }
+
+
+        li a{
+            color: whitesmoke;
+            display: inline-block;
+
+        }
+
+    }
+    .navlinks.open{
+        // display: block;
+        clip-path: circle(1000px);
+    }
+    .laptop-signin{
+        display: none;}
+        .laptop-navlinks{
+            display: none;
+        }
+}
+
+
+// style for feature spaces
+.features{
+    // border: 1px solid rgb(164, 128, 201);
+    padding: 1rem .5rem;
+    .feature_heading{
+        list-style: none;
+        h2{
+            margin-top: 1%;
+            margin-bottom: 1%;
+            color: $heading-color;
+        }
+        a{
+            margin-bottom: 1%;
+            display: inline-block;
+            color: $text-color;
+            text-decoration: underline;
+
+            &:hover{
+                color:$heading-color;
+            }
+        }
+    }
+
+// just change the flex direction
+    .card-reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .card{
+        background-color: white;
+        padding: 1rem .5rem;
+        margin:7%  auto;
+        border-radius: 1rem;
+        max-width: 318px;
+        .property_name{
+            color: $heading-color;
+            font-size: 1.5rem;
+            padding: .2rem 0;
+        }
+        .address{
+            color: $text-color;
+        }
+        h3{
+            font-size: 1.5rem;
+            color: $blue;
+        }
+
+        .house_spec{
+            list-style: none;
+            display: flex;
+            margin-top: 1rem;
+            justify-content: space-between;
+            color: $heading-color;
+            margin-bottom: 4%;
+
+            // align-items: ;
+            // text-align: left;
+   
+        }
+        .card_image{
+            width: 100%;
+            
+
+            img{
+                width: 100%;
+                border-radius: 5px;
+            }
+
+        }
+    }
+
+}
+
+
+// why choose us section
+.why_choose_us{
+    padding: 1rem .5rem;
+    background:linear-gradient(            
+        rgba(237, 240, 253,.7),
+    rgba(237, 240, 253,.7),
+        rgba(237, 240, 253,.7)
+
+
+    ) ,url('image/IMG-20200805-WA0030.jpg')no-repeat center/cover;
+
+
+    .why_choose_us__header{
+        color: $heading-color;  
+        margin-top: 2.6rem;      
+    }
+    p{
+        color: invert($color: rgba(237, 240, 253,.7));
+        padding: .7rem 0;
+    }
+    .why_choose_us_grid__content{
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2.6rem;      
+        margin-bottom: 2.6rem;      
+
+
+        // style for the font awsome
+        .fa-calendar-alt,
+        .fa-tasks,
+        .fa-lock,
+        .fa-house-user{
+            color: $blue;
+            background-color: white;
+            padding: 1rem;
+            margin-right: .5rem;
+            border-radius: 50%;
+        }
+
+        h4{
+            color: $heading-color;
+        }
+
+    }
+
+}
+
+// end of feature spaces
+
+// style for recent_added_property
+.recent_added_property{
+    // border-radius: 1px solid red;
+    h2,.recent_added_property_intro-text{
+        color: $heading-color;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .recent_added_property_intro-text{
+        color:$thick-text-color;
+    }
+
+
+
+
+.view_all_property_btn{
+    background-color: $blue;
+    color:  white;
+    display: block;
+    margin:2rem auto;
+    text-align: center;
+    padding: .7rem .8rem;
+    border-radius: 7px;
+    max-width: 200px;
+    
+}
+
+}
+
+
+.recent_added_grid{
+    display: grid;
+    gap: 20px;
+
+// card section
+.recent_added_card{
+    box-shadow:-1px 9px 11px 0px rgba(50, 50, 50, 0.33);
+    padding: .4rem;
+    background-color: white;
+    display: flex;
+    max-width: 450px;
+    border-radius: 9px;
+    // justify-content: space-between;
+    align-items: center;
+    // border: 1px solid red;
+
+    
+.recent_added_card_content{
+    width: 60%;
+    // border: 1px solid green;
+    margin-left: 10px;
+    margin-right: 3px;
+    // text-align: right;
+    // line-height: 2.2rem;
+
+    h4{
+        color: $heading-color;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    .city-name{
+        margin: 1rem 0;
+        color: $text-color;
+    }
+    .card_status{
+        margin: 1rem 0;
+
+        background-color:rgba(206, 216, 255,.7);
+        color: $heading-color;
+        width: 50%;
+        text-align: center;
+        padding: .4rem .3rem;
+        border-radius: 20px;
+    }
+
+    .space_btwn{
+        margin-top: 1rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .price{
+            color: $blue;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .date_published{
+            color: $text-color;
+        }
+    }
+
+}   
+
+    .recent_added_card_image{
+
+        width: 40%;
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: 6px;
+        }
+    }
+    
+}
+
+
+}
+// end of style for recent_added_property
+
+
+//start customers-review style
+.customers-review{
+    // border:1px solid red;
+    background-color: #eaedff;
+
+    // min-width: 400px;
+    padding: 5px;
+    .customer-pics{
+    margin: auto;
+
+        // border: 1px solid rebeccapurple;
+        padding:8px;
+        background-color: white;
+        border-radius: 10px;
+        max-width: 360px;
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    // font awsome qoute
+    .fa-quote-left{
+        color: $blue;
+        font-size: 1.3rem;
+        margin: .6rem 0;
+    }
+    .customer-review{
+        text-align: center;
+
+    }
+    .customer-review-text{
+        // color: darken($color: $text-color, $amount: 9);
+       color: #5b578b;
+       font-weight: 700;
+        margin: .6rem 0;
+
+    }
+
+    .custormer-job-title{
+        margin: .6rem 0;
+        color: $text-color;
+    }
+
+ 
+}
+
+//end customers-review style
+
+
+// start of subscribe style
+.subscribe{
+
+    .subscribe_heading{
+        color: $heading-color;
+        font-size: 1.1rem;
+        margin: .7rem 0;
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+    }
+    .subscribe_content{
+        color: $blue;
+        margin: .7rem 0;
+        text-align: center;
+    }
+    .input_box{
+        // border: 1px solid red;
+        border: none;
+        max-width: 600px;
+        padding: .4rem .8rem;
+
+        border-radius: 50px;
+        background-color: white;
+        display: flex;
+        margin: .7rem 0;
+        // box-shadow: 5px 5px 5px 5px rgb(161, 155, 155);
+        border-radius: 10px;
+        input[type=text]{
+            width: 65%;
+            border: none;
+            color: $thick-text-color;
+            padding-left: 20px;
+            
+        }
+        input[type=submit]{
+            background-color: $blue;
+            border: none;
+            padding: .7rem 0;
+        border-radius: 50px;  
+            color: white;
+            width: 35%;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+    }
+}
+
+// end of subscribe style
+
+
+//start of footer style
+footer{
+    
+    h2{color: $heading-color;}
+    a{color: $text-color;}
+    li{list-style: none;margin: .9rem 0;}
+.addresse{
+    margin-left:.8rem;
+    p{
+        color: $text-color;
+        text-align: left;
+    }
+}
+
+.about-us{
+   margin-top: .9rem;
+    margin-left:.8rem;
+}
+.help{
+   margin-top: .9rem;
+    margin-left:.8rem;
+
+}
+
+.copyright{
+    background-color: #f0f2ff;
+    color: $text-color;
+    padding: 1rem .7rem;
+}
+
+}//end of footer style
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// start of media queries
+
+@media(min-width:400px){
+    .features{
+        .card{
+            margin: 7%   auto;
+        }
+    }
+
+
+    .customers-review-flex{
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        max-width: 718px;
+        margin: auto;
+    }
+
+
+
+    footer .footer-content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        // border: 1px solid greenyellow;
+        max-width: 1000px;
+        margin: auto;
+        
+    }
+
+        .recent_added_property{
+            .recent_added_card{
+                // at this width center the car
+                margin: 0 auto;
+
+            }
+        }
+
+
+}
+
+@media(min-width:600px){
+
+
+
+
+  .subscribe{
+        // this div has the form subscibe
+        // and details on how to subscribe
+        .input_box{
+            margin:  0 auto;
+        padding: 10px .5rem;
+        border-radius: 50px;
+        
+        input[type=submit]{
+            padding: 1rem 0;
+        border-radius: 50px;   
+        }
+        .subscribe_heading{
+            font-size: .1rem;
+            color: red;
+        }
+        
+    }
+
+
+}
+// end of subscribe styling
+//-------- start of hero section
+.hero-section{
+
+    .hero-section_content{
+        // border: 1px solid red;
+        max-width: 600px;
+        text-align: left;
+        margin-left: 10%;
+        h1{
+            font-size: 3rem;
+        }
+    }
+}
+//-------- end of hero section
+
+
+
+
+    .why_choose_us{
+
+        .why_choose_us_gridBox__content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    
+
+    }
+    // end of why choose us styling
+
+
+
+    footer .footer-content{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+
+    .copyright{
+        text-align: right;
+    }
+  
+// end of footer styling
+
+// styling for the search bar and the hero section
+.search-box{
+    padding: 3px;
+    #selectSearch{
+        display: none;
+    }
+    .radios{
+        display:flex;
+        width: 40%;
+        justify-content: space-between;
+        outline: none;
+        
+        margin-left: 1%;
+
+    }
+    #inputsearch{
+        width: 40%;
+        margin-left:20px;
+    }
+    input[type=submit]{
+        width: 20%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-size: 1rem;
+    }
+    
+
+}
+
+
+
+
+
+}
+// end of min withdth 600px
+
+
+
+
+@media(min-width:684px){
+
+    // why choose us 
+    .why_choose_us{
+        .why_choose_us__header{
+            text-align: center;
+        }
+        .why_choose_us__header_ptag{text-align: center;}
+    
+    }
+
+    // fetured space for u
+    .card-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+// end of min-width:684;
+
+
+// start of min withdth 800px
+@media(min-width:800px){
+
+  .hero-section  nav .logo{
+        font-size: 2.4rem;
+    }   
+
+
+    .hero-section{
+        .hero-image-section{
+            //this is to make the image 50 percernt right side of the page
+            width: 50%;
+            right: 0%;
+            // border-radius: 40px;
+            border-bottom-left-radius: 40px;
+            border-left: 6px solid white;
+            border-bottom:6px solid white;
+        }
+    }
+
+    footer .addresse .logo{
+        font-size: 2.4rem;
+
+    }
+}
+// end of min withdth 800px
+
+
+
+
+
+
+
+
+
+@media(min-width:924px){
+    nav{
+        .laptop-signin{
+            display:inline-block;
+            border: 1px solid $blue;
+            padding: .5rem 2rem;
+            border-radius: 10px;
+            color: $thick-text-color;
+            transition: .5s all ease-out;
+            
+            &:hover{
+                color: white;
+                background-color: $heading-color;
+                transform: scale(1.1,1.1);
+            
+            }
+            
+        }
+        
+        .ham{
+            display: none;
+        }
+        .navlinks{
+            // on big scrren display none 
+            // dont want to see hamburger or the phone navlinks
+            display: none;
+        }
+        .laptop-navlinks{
+            // border: 1px solid darkolivegreen;
+            // width: 60%;
+            display: block;
+            ul{
+                display: flex;
+                list-style: none;
+                align-items: center;
+                // justify-content: space-between;
+                
+                li{
+                    padding: 0 20px;
+                    a{
+                        color: $thick-text-color;
+                        font-size: 1rem;
+                        transition: .5s color ease-in;
+                        font-weight: 600;
+                        &:hover{
+                            color: $blue;
+                        }
+                    }
+                
+                 
+                }
+
+            }
+        }
+
+    }
+
+
+
+    .why_choose_us{
+
+        .why_choose_us__grid>p{
+            text-align: left;
+            // border: 1px solid salmon;
+            width: 30%;
+            padding-top: 1rem;
+        }
+        .why_choose_us_gridBox__content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+    
+
+    }
+    // end of why choose us styling
+
+ 
+    .recent_added_grid{
+        // border: 1px solid red;
+        margin: 0 auto;
+        max-width: 1000px;
+        // grid-column: 10px;
+        // grid-row: 20px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        // align-items: center;
+        justify-items: center;
+
+        .recent_added_card{
+            padding: 1rem;
+            margin-bottom: 10px;
+        }
+    }
+
+
+
+
+    .hero-section{
+        //when it computer sixe increase the hero section
+        height:100vh;
+
+    }
+
+
+
+
+
+
+
+}
+// end of min-width:924px
+
+@media(min-width:1004px){
+    // 2.4rem
+
+    .why_choose_us{
+
+
+        h2{
+            font-size: 2.5rem;
+        }
+    }
+    .recent_added_property{
+        h2{
+            font-size: 2.5rem;
+
+        }
+    }
+
+    .subscribe{
+        .subscribe_heading{
+            font-size: 2.5rem;
+            margin-bottom: 1.2rem ;
+
+        }
+    }
+
+    .card-grid{
+        max-width: 1009px;
+        // border: 1px solid green;
+        margin:   auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .features{
+        .feature_heading{
+        max-width: 1004px;
+        margin: 1%  auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        h2{
+            font-size: 2.4rem;
+        }
+            // text-align: center;
+        }
+    }
+
+
+}
+
+// end of min-width:1004px)
